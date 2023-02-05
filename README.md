@@ -18,4 +18,13 @@ In order to add new packages to our new virtual enviroment we create a file call
 ```
 pip install -r requirements.txt
 ```
-We need config on congiguration on pycharm de projeto-interpreter with the virtual enviroment
+We need config on configuration on pycharm de projeto-interpreter with the virtual enviroment
+## Deploying our functions
+First, we have to set our project ID with the following command:
+```
+gcloud config set project [YOUR PROJECT ID]
+```
+Then we deploy our functions with this command:
+```
+gcloud functions deploy [FUNCTION NAME] --runtime python310 --trigger-http
+```
